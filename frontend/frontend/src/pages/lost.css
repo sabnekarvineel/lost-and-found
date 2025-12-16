@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+  background: #000000; /* Black background */
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF; /* White text color */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+
+  margin: 80px auto;
+  padding: 60px;
+  background: #301E67; /* Box background color */
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid #FFFFFF; /* White border */
+}
+
+h1, label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF; /* White text */
+  margin-bottom: 7px;
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+}
+h1{
+  margin-left: 25%;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #FFFFFF; /* White border for inputs */
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF; /* White text */
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #301E67; /* Accent color for focus */
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.drag-drop-zone {
+  width: 50%;
+  margin-left: 25%;
+  border: 2px dashed #FFFFFF; /* White dashed border */
+  border-radius: 10px;
+  padding: 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.drag-drop-zone:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.upload-label {
+  display: inline-block;
+  font-size: 14px;
+  color: #301E67; /* Accent color for text */
+  cursor: pointer;
+  padding: 12px 20px;
+  background: #FFFFFF; /* White background */
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.upload-label:hover {
+  background: #301E67; /* Accent color */
+  color: #FFFFFF; /* White text */
+  box-shadow: 0 6px 20px rgba(48, 30, 103, 0.5);
+}
+
+.image-preview {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF; /* White border for image */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+button {
+  font-size: 16px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  background: #301E67; /* Accent color */
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(48, 30, 103, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #FFFFFF; /* White background on hover */
+  color: #301E67; /* Accent text color */
+  box-shadow: 0 8px 20px rgba(48, 30, 103, 0.6);
+}
+
+/* Boxed Sections */
+.object-type-section,
+.lost-date-section,
+.image-section,
+.description-section,
+.contact-section {
+  width:50%;
+  margin-left:25%;
+  margin-top:40px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05); /* Slightly transparent white */
+  border-radius: 10px;
+  border: 1px solid #FFFFFF; /* White border for each section */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+.lost-date-section,.location-description,.contact-number,.description{
+  width:50%;
+  margin-left:25%;
+  margin-top:40px;
+}
+.item-type{
+
+  width:50%;
+  margin-left:25%;
+  margin-top:40px;
+}
+.submit-button{
+  width:50%;
+  margin-left:25%;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+select {
+  appearance: none; /* Removes default browser styling */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background-color: #301E67; /* Background color */
+  color: white; /* Font color */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  background-color: #4e2a88; /* Slightly lighter shade on hover */
+}
+
+select:focus {
+  outline: none;
+  border: 2px solid #4e2a88; /* Focus border */
+  box-shadow: 0 0 5px rgba(78, 42, 136, 0.5); /* Glow effect */
+}
+
+/* For dropdown menu options */
+select option {
+  background-color: #301E67; /* Option background color */
+  color: white; /* Option text color */
+}
+
+/* Optional: to add a dropdown arrow */
+select {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
