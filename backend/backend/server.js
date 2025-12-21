@@ -13,7 +13,7 @@ app.use(express.json());
 const user = require("./routes/UserRoute");
 
 // Prefer MONGO_URI but fall back to URI for compatibility with existing .env
-const MONGO_URI = process.env.MONGO_URI || process.env.URI;
+const MONGO_URI = process.env.MONGO_URI;
 if (!MONGO_URI) {
   console.error('MongoDB connection string is not defined. Set MONGO_URI or URI in your .env');
   process.exit(1);
