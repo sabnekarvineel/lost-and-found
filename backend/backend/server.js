@@ -1,30 +1,37 @@
-const express=require("express");
-const app=express();
-
+const express = require("express");
+const app = express();
 const cors = require('cors');
-app.use(cors());
-
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-app.use(express.json())
+
+// Load environment variables as early as possible
 dotenv.config();
+
+app.use(cors());
 app.use(express.json());
 
-const user=require("./routes/UserRoute");
+const user = require("./routes/UserRoute");
 
-mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("Connected to MongoDB successfully");
-        
-    })
-    .catch((error) => {
-        console.error("Error connecting to MongoDB:", error);
-    });
+// Prefer MONGO_URI but fall back to URI for compatibility with existing .env
+const MONGO_URI = process.env.MONGO_URI || process.env.URI;
+if (!MONGO_URI) {
+  console.error('MongoDB connection string is not defined. Set MONGO_URI or URI in your .env');
+  process.exit(1);
+}
 
-    const PORT =  3000; // Default to port 3000 if not specified
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
-    });
+// Connect to MongoDB (mongoose v8+ no longer needs the legacy options)
+mongoose.connect(MONGO_URI)
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => {
+    console.error('MongoDB Error:', err);
+    process.exit(1);
+  });
 
+const PORT = process.env.PORT || 3000;
+
+// Register routes / middleware before starting the server
 app.use(user);
 
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
