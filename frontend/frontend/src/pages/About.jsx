@@ -16,7 +16,7 @@ const About = () => {
         {/* Header Section */}
         <h1 className="about-header-title">About Us</h1>
         <p className="about-header-description">
-          Welcome to the Lost and Found Portal of Bhavan's Vivekananda College! 
+          Welcome to the Lost and Found Portal for Bhavan's Vivekananda College! 
           Our goal is to connect the college community by helping students and staff 
           recover their lost items quickly and efficiently.
         </p>
@@ -36,7 +36,7 @@ const About = () => {
             <p className="about-content-text">
               To become the most reliable and efficient lost-and-found 
               management system in educational institutions, promoting 
-              honesty and accountability among students and staff.
+              honesty and accountability among students and staffs.
             </p>
           </div>
         </div>
