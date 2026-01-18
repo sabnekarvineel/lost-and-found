@@ -21,12 +21,12 @@ The goal of this project is to connect people who lost something with those who 
 
 Frontend
 
-HTML
+React.js
 
 CSS
 
 JavaScript
-(or React if applicable)
+
 
 Backend
 
@@ -35,7 +35,7 @@ Node.js / Express
 
 Database
 
-MongoDB / MySQL / Firebase
+MongoDB 
 
 Other Tools
 
@@ -103,13 +103,8 @@ AI-based item matching
 
 Location-based map view
 
-👨‍💻 Author
 
-Vineel Sabnekar
-Student | Developer
 
-📜 License
 
-This project is licensed under the MIT License.
 
 
