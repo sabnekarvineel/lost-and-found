@@ -91,17 +91,6 @@ To practice full-stack web development
 
 To build a socially useful application
 
-📌 Future Enhancements
-
-User login and authentication
-
-Admin panel for verification
-
-Email / SMS notifications
-
-AI-based item matching
-
-Location-based map view
 
 
 
