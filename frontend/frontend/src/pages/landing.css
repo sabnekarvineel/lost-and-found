@@ -1,5 +1,6 @@
 body{
     background-color:black;
+    overflow-x: hidden;
 }
 /* buttons */
 /* src/pages/homepage.css */
@@ -14,14 +15,15 @@ body{
     display: flex;
     justify-content: center; /* Center the buttons */
     align-items: center; /* Align items vertically */
-    height: 100vh; /* Full viewport height */
+    min-height: calc(100vh - 70px); /* Full viewport height minus navbar */
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
    /* Stack items vertically */
     justify-content: center; /* Center the buttons */
     align-items: center; /* Align items vertically */
-    height: 100%; /* Full viewport height */
+    width: 100%;
+    padding: 40px 20px;
     flex-wrap: wrap; 
    
 }
@@ -72,6 +74,7 @@ body{
     display: flex; /* Align buttons in a row */
     justify-content: center; /* Center the buttons */
     gap: 20px; /* Space between buttons */
+    flex-wrap: wrap;
 }
 a{
     cursor:pointer;
@@ -79,13 +82,40 @@ a{
     color:#301E67
 }
 @media (max-width: 768px) {
+    .btn-container {
+        gap: 32px;
+        min-height: calc(100vh - 62px);
+        padding: 36px 16px;
+    }
+
+    .button-row {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
     .styled-btn {
         font-size: 20px; /* Slightly smaller font size on smaller screens */
         padding: 12px 25px; /* Adjust padding for smaller screens */
     }
+
+    .lost-btn,
+    .found-btn {
+        width: 100%;
+        max-width: 360px;
+        height: 120px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
     .question-text {
-        font-size: 24px; /* Adjust question text size for smaller screens */
+        margin-top: 0;
+        font-size: 30px; /* Adjust question text size for smaller screens */
+        line-height: 1.25;
+        max-width: 560px;
     }
 }
 
@@ -95,6 +125,6 @@ a{
         padding: 10px 20px; /* Further adjust padding */
     }
     .question-text {
-        font-size: 20px; /* Further adjust question text size */
+        font-size: 24px; /* Further adjust question text size */
     }
 }

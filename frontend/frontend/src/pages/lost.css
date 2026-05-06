@@ -5,6 +5,7 @@ body {
   color: #FFFFFF; /* White text color */
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -123,6 +124,11 @@ button {
   transition: all 0.3s ease;
 }
 
+.lost-form {
+  width: 100%;
+  padding: 10px 0 1px;
+}
+
 button:hover {
   background: #FFFFFF; /* White background on hover */
   color: #301E67; /* Accent text color */
@@ -148,6 +154,51 @@ button:hover {
 @media (max-width: 768px) {
   .container {
     padding: 15px;
+  }
+
+  .lost-form {
+    padding: 12px 16px 1px;
+  }
+
+  h1 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .object-type-section,
+  .lost-date-section,
+  .image-section,
+  .description-section,
+  .contact-section,
+  .location-description,
+  .contact-number,
+  .description,
+  .item-type,
+  .drag-drop-zone,
+  .submit-button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .object-type-section,
+  .lost-date-section,
+  .image-section,
+  .description-section,
+  .contact-section {
+    padding: 16px;
+  }
+
+  .drag-drop-zone {
+    padding: 28px 14px;
+  }
+
+  .upload-label {
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.4;
   }
 
   label {

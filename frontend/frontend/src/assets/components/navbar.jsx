@@ -16,17 +16,23 @@ function Navbar() {
         <img src={img1} alt="Logo" className="logo" />
       </div>
       <div className="nav-right">
-        <div className="hamburger" onClick={toggleMenu}>
+        <button
+          type="button"
+          className={`hamburger ${isOpen ? 'open' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
+        >
           <div className={`line ${isOpen ? 'open' : ''}`}></div>
           <div className={`line ${isOpen ? 'open' : ''}`}></div>
           <div className={`line ${isOpen ? 'open' : ''}`}></div>
-        </div>
+        </button>
         <ul className={`menu ${isOpen ? 'open' : ''}`}>
-          <li><Link to="/lost">Lost</Link></li>
-          <li><Link to="/found">Found</Link></li>
-          <li><Link to="/search">Search</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li><Link to="/lost" onClick={() => setIsOpen(false)}>Lost</Link></li>
+          <li><Link to="/found" onClick={() => setIsOpen(false)}>Found</Link></li>
+          <li><Link to="/search" onClick={() => setIsOpen(false)}>Search</Link></li>
+          <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
+          <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
         </ul>
       </div>
     </nav>

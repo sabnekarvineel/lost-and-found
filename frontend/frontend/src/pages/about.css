@@ -6,6 +6,7 @@
     background-color: #0a0a0a; /* Slightly lighter black for contrast */
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden;
   }
   
   /* Navbar Styling */
@@ -114,6 +115,24 @@
   
   /* Media Query for Responsiveness */
   @media (max-width: 768px) {
+    .about-body {
+      padding: 0 16px 28px;
+    }
+
+    .about-page-container {
+      padding: 22px 16px;
+      border-radius: 10px;
+    }
+
+    .about-header-title {
+      font-size: 32px;
+      line-height: 1.15;
+    }
+
+    .about-header-description {
+      font-size: 16px;
+    }
+
     .about-content-section {
       flex-direction: column;
       gap: 20px;
@@ -121,6 +140,14 @@
   
     .about-content-item {
       flex: 1 1 100%;
+      width: 100%;
+      text-align: center;
+      padding: 18px;
+    }
+
+    .about-cta-button {
+      width: 100%;
+      max-width: 320px;
     }
   }
   

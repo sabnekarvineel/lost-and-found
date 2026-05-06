@@ -6,6 +6,7 @@ body {
     background-color: #0a0a0a; /* Slightly lighter black for better contrast */  
     color: #fff; /* White for text contrast */  
     line-height: 1.6;  
+    overflow-x: hidden;
   }  
   
   /* Navbar Styling */  
@@ -154,6 +155,21 @@ body {
   
   /* Media Query for Responsiveness */  
   @media (max-width: 768px) {  
+    .contact-container {
+      width: calc(100% - 32px);
+      padding: 22px 16px;
+      border-radius: 10px;
+    }
+
+    .contact-header {
+      font-size: 32px;
+      line-height: 1.15;
+    }
+
+    .contact-description {
+      font-size: 16px;
+    }
+
     .contact-info {  
       flex-direction: column;  
       gap: 15px;  
@@ -161,6 +177,19 @@ body {
   
     .contact-item {  
       flex: 1 1 100%;  
+      width: 100%;
     }  
+
+    .contact-form {
+      padding: 20px 14px;
+    }
+
+    .contact-form h2 {
+      font-size: 24px;
+    }
+
+    .submit-buttonn {
+      width: 100%;
+    }
   }  
   

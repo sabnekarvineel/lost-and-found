@@ -1,0 +1,12 @@
+{
+  "name": "lost-and-found",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix frontend/frontend",
+    "frontend": "npm run dev --prefix frontend/frontend",
+    "backend": "npm run dev --prefix backend/backend",
+    "build": "npm run build --prefix frontend/frontend",
+    "preview": "npm run preview --prefix frontend/frontend"
+  }
+}

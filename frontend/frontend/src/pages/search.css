@@ -3,6 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: black /* Gradient background */
     color: #ffffff; /* White text */
+    overflow-x: hidden;
 }
 
 .header {
@@ -95,6 +96,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
+    width: min(92vw, 600px);
+    max-height: 88vh;
+    overflow-y: auto;
     text-align: center;
     position: relative;
     animation: fadeIn 0.3s; /* Fade-in animation */
@@ -166,3 +170,46 @@ body {
     max-width: 500px;
     width: 90%;
   }
+
+@media (max-width: 768px) {
+    .header {
+        padding: 28px 16px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+
+    .item-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        margin: 0;
+        padding: 14px;
+    }
+
+    .modal-content {
+        width: calc(100vw - 28px);
+        padding: 18px;
+    }
+
+    .close-button {
+        top: 8px;
+        right: 8px;
+        left: auto;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+    }
+}
